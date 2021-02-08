@@ -1,0 +1,19 @@
+.InputContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.InputContainer input {
+    box-sizing: border-box;
+    padding: 9px 0 7px 8px;
+    background-color: #fafafa;
+    border: 1px solid rgba(var(--ca6, 219, 219, 219), 1);
+    border-radius: 3px;
+}
+
+.InputContainer label {
+    font-weight: bold;
+    padding-right: 32px;
+}

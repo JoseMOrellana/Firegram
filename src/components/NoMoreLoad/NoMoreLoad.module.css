@@ -1,0 +1,10 @@
+.Container {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #efb6b2;
+    color: white;
+    text-align: center;
+    padding: 24px;
+    margin-bottom: 24px;
+    border-radius: 5px;
+}

@@ -1,0 +1,90 @@
+.ProfileHeader {
+    width: 100%;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.Info {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    align-items: stretch;
+}
+
+.First {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.Second {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.Second span {
+    margin-right: 40px;
+}
+
+.Username {
+    font-size: 28px;
+    line-height: 32px;
+}
+
+.HeaderButton {
+    box-sizing: border-box;
+    margin-left: 20px;
+    background-color: #fafafa;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    padding: 5px 9px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+.HeaderButton:disabled {
+    color: #ccc;
+    border-width: 0px;
+    cursor: initial;
+}
+
+.Name {
+    font-weight: bold;
+}
+
+.SecondMobile {
+    display: none;
+}
+
+.NameMobile {
+    display: none;
+}
+
+@media only screen and (max-width: 736px) {
+    .First {
+        flex-direction: column;
+        margin: 0;
+    }
+    .EditButton {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .Second {
+        display: none;
+    }
+
+    .Name {
+        display: none;
+    }
+
+    .SecondMobile {
+        display: flex;
+    }
+
+    .NameMobile {
+        display: block;
+    }
+}

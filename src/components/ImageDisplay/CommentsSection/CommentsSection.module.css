@@ -1,0 +1,18 @@
+.Comments {
+    height: 70%;
+    overflow-y: auto;
+    list-style-type: none;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.Comments::-webkit-scrollbar {
+    display: none;
+}
+
+.Comment {
+    margin-bottom: 8px;
+}

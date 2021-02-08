@@ -1,0 +1,68 @@
+{
+    "name": "firegram",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@testing-library/jest-dom": "^4.2.4",
+        "@testing-library/react": "^9.5.0",
+        "@testing-library/user-event": "^7.2.1",
+        "firebase": "^8.0.2",
+        "framer-motion": "^2.9.4",
+        "prop-types": "^15.7.2",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "react-icons": "^4.1.0",
+        "react-image-crop": "^8.6.6",
+        "react-router-dom": "^5.2.0",
+        "react-scripts": "3.4.1"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "seed": "node src/seeder/seeder.js"
+    },
+    "jest": {
+        "collectCoverageFrom": [
+            "src/**/*.js",
+            "!src/index.js",
+            "!src/hooks/*.js",
+            "!src/context/*.js",
+            "!src/firebase/*.js",
+            "!src/helpers/*.js",
+            "!src/components/UploadForm/UploadForm.js"
+        ],
+        "coverageThreshold": {
+            "global": {
+                "branches": 90,
+                "functions": 90,
+                "lines": 90,
+                "statements": 90
+            }
+        },
+        "coverageReporters": [
+            "html",
+            "text"
+        ]
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "dotenv": "^8.2.0",
+        "firebase-admin": "^9.4.2"
+    }
+}

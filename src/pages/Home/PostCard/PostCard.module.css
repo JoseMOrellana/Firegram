@@ -1,0 +1,32 @@
+.Card {
+    min-width: 400px;
+    width: 60%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 64px auto;
+    overflow: hidden;
+}
+
+.Card img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.UserData {
+    padding: 0 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Details {
+    padding: 0 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.Details p {
+    width: 100%;
+}

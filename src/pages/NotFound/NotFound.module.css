@@ -1,0 +1,25 @@
+.Container {
+    background-image: url("/images/lighthouse.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-left: 20%;
+    box-sizing: border-box;
+}
+
+.Content {
+    background-color: #fff;
+    padding: 24px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.Content img {
+    width: 320px;
+}
+
+.Content h1 {
+    font-family: "Pacifico";
+}

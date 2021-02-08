@@ -1,0 +1,12 @@
+.Content {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.HideButton {
+    visibility: hidden;
+}
+
+.Container {
+    padding: 0;
+}

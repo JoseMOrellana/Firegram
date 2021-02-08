@@ -1,0 +1,32 @@
+.Container {
+    margin: 24px;
+}
+
+.InputContainer {
+    width: 100%;
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.InputContainer label {
+    font-weight: bold;
+    padding-right: 32px;
+}
+
+.PicButtonLabel input {
+    height: 0;
+    width: 0;
+    opacity: 0;
+}
+.PicButtonLabel {
+    display: block;
+    width: 160px;
+    border: 1px solid var(--primary);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.Container form {
+    width: 80%;
+    max-width: 320px;
+}

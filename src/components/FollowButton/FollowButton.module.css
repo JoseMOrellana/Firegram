@@ -1,0 +1,18 @@
+.FollowButton {
+    box-sizing: border-box;
+    margin-left: 20px;
+    background-color: #fafafa;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    padding: 5px 9px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+.FollowButton:disabled {
+    color: #ccc;
+    border-width: 0px;
+    cursor: initial;
+}
