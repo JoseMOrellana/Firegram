@@ -13,6 +13,9 @@
 /build
 
 # misc
+/src/seeder/seederConfig.env
+/src/seeder/serviceAccount.json
+/.firebase
 .DS_Store
 .env.local
 .env.development.local
@@ -23,5 +26,4 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-/src/seeder/seederConfig.env
-/src/seeder/serviceAccount.json
+
