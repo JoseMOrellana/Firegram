@@ -33,14 +33,15 @@
 }
 
 .Comment {
-    background-color: #fff;
+    background-color: #ecf0f3;
     color: #0095f6;
     border-width: 0;
     font-weight: bold;
-    width: 10%;
+    width: 80px;
     cursor: pointer;
 }
 
 .Comment:disabled {
     color: #ccc;
+    background-color: #fff;
 }

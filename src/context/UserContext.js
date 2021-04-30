@@ -14,6 +14,7 @@ import {
     dislikePost,
     submitComment,
 } from "../helpers/profile";
+import AlertMessage from "../components/AlertMessage/AlertMessage";
 const UserContext = createContext();
 
 export function useUser() {
@@ -28,6 +29,7 @@ export function UserProvider({ children }) {
     const [mounting, setMounting] = useState(true);
     const [progress, setProgress] = useState(0);
     const [url, setUrl] = useState(null);
+    const [alertMessage, setAlertMessage] = useState(null);
 
     function asyncHandler(fn) {
         return function () {
@@ -61,6 +63,7 @@ export function UserProvider({ children }) {
             following: [],
             followers: [],
         });
+        setAlertMessage("You have successfully signed up!");
         history.push("/");
     });
 
@@ -73,6 +76,7 @@ export function UserProvider({ children }) {
 
     const forgotPassword = asyncHandler(async ({ email }) => {
         await auth().sendPasswordResetEmail(email);
+        setAlertMessage("Password reset email sent");
     });
 
     const updatePassword = asyncHandler(
@@ -84,14 +88,12 @@ export function UserProvider({ children }) {
                 currentUser.email,
                 currentPassword
             );
-            console.log(credential);
             await auth().currentUser.reauthenticateWithCredential(credential);
             auth().currentUser.updatePassword(newPassword);
         }
     );
 
     const updateProfile = asyncHandler(async ({ name, email }) => {
-        console.log(name, email);
         let updateObj = {};
         if (name && name !== "") {
             updateObj.name = name;
@@ -191,9 +193,7 @@ export function UserProvider({ children }) {
     });
 
     useEffect(() => {
-        console.log(mounting);
         const unsubscribe = auth().onAuthStateChanged(async (user) => {
-            console.log(user);
             if (user) {
                 try {
                     await projectFirestore
@@ -239,6 +239,12 @@ export function UserProvider({ children }) {
     return (
         <UserContext.Provider value={value}>
             {!mounting && children}
+            {alertMessage && (
+                <AlertMessage
+                    message={alertMessage}
+                    close={() => setAlertMessage(null)}
+                />
+            )}
         </UserContext.Provider>
     );
 }

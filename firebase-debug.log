@@ -1,0 +1,168 @@
+[debug] [2021-03-16T21:03:42.934Z] ----------------------------------------------------------------------
+[debug] [2021-03-16T21:03:42.937Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\usuario\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --debug
+[debug] [2021-03-16T21:03:42.937Z] CLI Version:   9.6.1
+[debug] [2021-03-16T21:03:42.937Z] Platform:      win32
+[debug] [2021-03-16T21:03:42.937Z] Node Version:  v14.15.0
+[debug] [2021-03-16T21:03:42.941Z] Time:          Tue Mar 16 2021 17:03:42 GMT-0400 (hora de Venezuela)
+[debug] [2021-03-16T21:03:42.941Z] ----------------------------------------------------------------------
+[debug] [2021-03-16T21:03:42.941Z] 
+[debug] [2021-03-16T21:03:42.951Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-03-16T21:03:42.954Z] > authorizing via signed-in user
+[debug] [2021-03-16T21:03:42.955Z] [iam] checking project firegram-ecd03 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-03-16T21:03:42.959Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-03-16T21:03:42.959Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-16T21:03:43.331Z] <<< HTTP RESPONSE 200 {"date":"Tue, 16 Mar 2021 21:03:42 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-16T21:03:43.419Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/firegram-ecd03:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-03-16T21:03:43.863Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 16 Mar 2021 21:03:43 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=104","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-16T21:03:43.865Z] > refreshing access token with scopes: []
+[debug] [2021-03-16T21:03:43.866Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-16T21:03:44.136Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Tue, 16 Mar 2021 21:03:43 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-16T21:03:44.229Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/firegram-ecd03 [none]
+[debug] [2021-03-16T21:03:44.702Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/firegram-ecd03 200
+[debug] [2021-03-16T21:03:44.703Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/firegram-ecd03 {"projectId":"firegram-ecd03","projectNumber":"68874508842","displayName":"firegram","name":"projects/firegram-ecd03","resources":{"hostingSite":"firegram-ecd03","realtimeDatabaseInstance":"firegram-ecd03","storageBucket":"firegram-ecd03.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'firegram-ecd03'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2021-03-16T21:03:44.717Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-03-16T21:03:44.718Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-16T21:03:44.983Z] <<< HTTP RESPONSE 200 {"date":"Tue, 16 Mar 2021 21:03:44 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-16T21:03:45.043Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/firegram-ecd03/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2021-03-16T21:03:45.990Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 16 Mar 2021 21:03:45 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[firegram-ecd03]: beginning deploy... 
+[info] i  hosting[firegram-ecd03]: found 28 files in build 
+[debug] [2021-03-16T21:03:46.035Z] > refreshing access token with scopes: []
+[debug] [2021-03-16T21:03:46.036Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-16T21:03:46.041Z] [hosting] hash cache [YnVpbGQ] stored for 28 files
+[debug] [2021-03-16T21:03:46.041Z] [hosting][hash queue][FINAL] {"max":4,"min":0,"avg":0,"active":0,"complete":28,"success":28,"errored":0,"retried":0,"total":28,"elapsed":12}
+[debug] [2021-03-16T21:03:46.309Z] <<< HTTP RESPONSE 200 {"date":"Tue, 16 Mar 2021 21:03:45 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-16T21:03:46.393Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/sites/firegram-ecd03/versions/3aac7cda085883f5:populateFiles [none]
+[debug] [2021-03-16T21:03:46.394Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/firegram-ecd03/versions/3aac7cda085883f5:populateFiles {"files":{"/asset-manifest.json":"1afaf1019d0007d3613e8e8e0adbd20d5fbcfce6da07e1f4b189e997e3894dce","/favicon.ico":"d96ddbc4933b04e12c738ab39f469573143949ca2c39eda0a49d16f83d40c319","/index.html":"85c4815de57d7eae421fd7b8e3e28096ffef5627b3cdce045be0a3138634201a","/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","/manifest.json":"aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a","/precache-manifest.43b5801e109c279b3fb43d46cbcd056b.js":"88baf3ffce7326790d722b2e4dc4ca9083e1cb9b16be48bc8258d75d788720f9","/robots.txt":"bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49","/service-worker.js":"8b61807c1dfd632606006591177e45b8ba9728d3cd96e4e451293974403e167b","/images/404-space.png":"afdd90185ac432114f7b699ded7dcf56bbc3092e050c6cebe77e3482b23340d4","/images/default-user.jpg":"dd8796b4775ce78dec0fb533ab29d3da69edcf2faf4267aeef332ab7470008f6","/images/forgotpass-bg.jpg":"8dbc9f1a7f4486d2630175fdf09590b1a6fa87911ad056a807d481a762bda493","/images/landing-bg.jpg":"cea5103876c10aa1cb6c1f4f947da4db8ad834f45a2ace47cb2af2ee3f63120c","/images/lighthouse.jpg":"212897ee65595801434f830407fc3b65ce4545602ab4ccacb5ed66fe5108df77","/images/Loch Ness-big.png":"d1a4357ccb6c40160f243ce1fd74fd12ed623d935ff3d9c4c600f9a48a0070f3","/images/logo.png":"e4f1c50a89b89ca3313f7a3834c048cabca4d0b7f1726a327528cb9baf0b4dc1","/images/signup-bg.jpg":"40545d5e3699e2d54edefdc9e851b2d146ff251cc38610d423c38fbd2ea15566","/static/css/2.1bce3852.chunk.css":"9babbc57e3b1e8103a69b90b8fbcba663c48a67b8cecc6ebfeaf7e6853f908ad","/static/css/2.1bce3852.chunk.css.map":"a1267b2876779eee7bfabdc1d4bafa0e4b245b67385bf90238be3635907beb5b","/static/css/main.54ca0bfb.chunk.css":"86d551733807c5ee4d3433cbd67e445f99daabf3c6ddacd3c3bea53daa66d18b","/static/css/main.54ca0bfb.chunk.css.map":"7c8cc4fa30bd54b762fd17110e4ef07719c445e8554d1909f773d21d374dd59c","/static/js/2.986f5956.chunk.js":"688b474d9b3063c7c7c02529ac159c17916b0b7ae7f0c4db2c99a161f2fac782","/static/js/2.986f5956.chunk.js.LICENSE.txt":"669ea488ffae9ce072b62dce2b28c2f9019f3d98d9bbacd3ddfa0386c03fba6c","/static/js/2.986f5956.chunk.js.map":"54520fce3fdac5eaa2d4dfc8ce2194bafe0f1e5afbf6ab9acab92d6b15db0cc4","/static/js/main.03246743.chunk.js":"dc5de5d56bcda01b2ebb5796b79ef610e798fbc532baa402fb7821ae8d5144ec","/static/js/main.03246743.chunk.js.map":"195f1157cf98086cc9f9574e1cfcf357381df0080a36f47eedd6b19f115de8e6","/static/js/runtime-main.4422d9b2.js":"09e3d131dbe3ea9ade079dff6bd84fc2abc2cce4596f81df8a2d08b00e0055e3","/static/js/runtime-main.4422d9b2.js.map":"f13378f2320c890dd2bc4ca1af064b889c4235cb072c1592a2de54ed2099b339"}}
+[debug] [2021-03-16T21:03:47.049Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/sites/firegram-ecd03/versions/3aac7cda085883f5:populateFiles 200
+[debug] [2021-03-16T21:03:47.050Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/firegram-ecd03/versions/3aac7cda085883f5:populateFiles {"uploadRequiredHashes":["212897ee65595801434f830407fc3b65ce4545602ab4ccacb5ed66fe5108df77","40545d5e3699e2d54edefdc9e851b2d146ff251cc38610d423c38fbd2ea15566"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/firegram-ecd03/versions/3aac7cda085883f5/files"}
+[debug] [2021-03-16T21:03:47.057Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/firegram-ecd03/versions/3aac7cda085883f5/files/212897ee65595801434f830407fc3b65ce4545602ab4ccacb5ed66fe5108df77 [none]
+[debug] [2021-03-16T21:03:47.058Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/firegram-ecd03/versions/3aac7cda085883f5/files/212897ee65595801434f830407fc3b65ce4545602ab4ccacb5ed66fe5108df77 [stream]
+[debug] [2021-03-16T21:03:47.061Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/firegram-ecd03/versions/3aac7cda085883f5/files/40545d5e3699e2d54edefdc9e851b2d146ff251cc38610d423c38fbd2ea15566 [none]
+[debug] [2021-03-16T21:03:47.063Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/firegram-ecd03/versions/3aac7cda085883f5/files/40545d5e3699e2d54edefdc9e851b2d146ff251cc38610d423c38fbd2ea15566 [stream]
+[debug] [2021-03-16T21:03:47.066Z] [hosting][populate queue][FINAL] {"max":1022,"min":1022,"avg":1022,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1031}
+[debug] [2021-03-16T21:03:47.067Z] [hosting] uploads queued: 2
+[info] i  hosting: uploading new files [0/2] (0%) 
+[info] i  hosting: uploading new files [0/2] (0%) 
+[info] i  hosting: uploading new files [0/2] (0%) 
+[info] i  hosting: uploading new files [0/2] (0%) 
+[info] i  hosting: uploading new files [0/2] (0%) 
+[info] i  hosting: uploading new files [0/2] (0%) 
+[info] i  hosting: uploading new files [0/2] (0%) 
+[info] i  hosting: uploading new files [0/2] (0%) 
+[info] i  hosting: uploading new files [0/2] (0%) 
+[info] i  hosting: uploading new files [0/2] (0%) 
+[info] i  hosting: uploading new files [0/2] (0%) 
+[info] i  hosting: uploading new files [0/2] (0%) 
+[info] i  hosting: uploading new files [0/2] (0%) 
+[info] i  hosting: uploading new files [0/2] (0%) 
+[info] i  hosting: uploading new files [0/2] (0%) 
+[info] i  hosting: uploading new files [0/2] (0%) 
+[info] i  hosting: uploading new files [0/2] (0%) 
+[info] i  hosting: uploading new files [0/2] (0%) 
+[info] i  hosting: uploading new files [0/2] (0%) 
+[debug] [2021-03-16T21:04:25.239Z] [uploadQueue] Retrying task 212897ee65595801434f830407fc3b65ce4545602ab4ccacb5ed66fe5108df77
+[debug] [2021-03-16T21:04:25.241Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/firegram-ecd03/versions/3aac7cda085883f5/files/212897ee65595801434f830407fc3b65ce4545602ab4ccacb5ed66fe5108df77 [none]
+[debug] [2021-03-16T21:04:25.243Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/firegram-ecd03/versions/3aac7cda085883f5/files/212897ee65595801434f830407fc3b65ce4545602ab4ccacb5ed66fe5108df77 [stream]
+[info] i  hosting: uploading new files [0/2] (0%) 
+[info] i  hosting: uploading new files [0/2] (0%) 
+[info] i  hosting: uploading new files [0/2] (0%) 
+[info] i  hosting: uploading new files [0/2] (0%) 
+[info] i  hosting: uploading new files [0/2] (0%) 
+[info] i  hosting: uploading new files [0/2] (0%) 
+[info] i  hosting: uploading new files [0/2] (0%) 
+[info] i  hosting: uploading new files [0/2] (0%) 
+[info] i  hosting: uploading new files [0/2] (0%) 
+[info] i  hosting: uploading new files [0/2] (0%) 
+[info] i  hosting: uploading new files [0/2] (0%) 
+[info] i  hosting: uploading new files [0/2] (0%) 
+[debug] [2021-03-16T21:04:49.668Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/firegram-ecd03/versions/3aac7cda085883f5/files/212897ee65595801434f830407fc3b65ce4545602ab4ccacb5ed66fe5108df77 200
+[debug] [2021-03-16T21:04:49.669Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/firegram-ecd03/versions/3aac7cda085883f5/files/212897ee65595801434f830407fc3b65ce4545602ab4ccacb5ed66fe5108df77 [stream]
+[info] i  hosting: uploading new files [1/2] (50%) 
+[info] i  hosting: uploading new files [1/2] (50%) 
+[info] i  hosting: uploading new files [1/2] (50%) 
+[info] i  hosting: uploading new files [1/2] (50%) 
+[info] i  hosting: uploading new files [1/2] (50%) 
+[info] i  hosting: uploading new files [1/2] (50%) 
+[info] i  hosting: uploading new files [1/2] (50%) 
+[debug] [2021-03-16T21:05:02.081Z] [uploadQueue] Retrying task 40545d5e3699e2d54edefdc9e851b2d146ff251cc38610d423c38fbd2ea15566
+[debug] [2021-03-16T21:05:02.083Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/firegram-ecd03/versions/3aac7cda085883f5/files/40545d5e3699e2d54edefdc9e851b2d146ff251cc38610d423c38fbd2ea15566 [none]
+[debug] [2021-03-16T21:05:02.085Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/firegram-ecd03/versions/3aac7cda085883f5/files/40545d5e3699e2d54edefdc9e851b2d146ff251cc38610d423c38fbd2ea15566 [stream]
+[info] i  hosting: uploading new files [1/2] (50%) 
+[info] i  hosting: uploading new files [1/2] (50%) 
+[info] i  hosting: uploading new files [1/2] (50%) 
+[info] i  hosting: uploading new files [1/2] (50%) 
+[info] i  hosting: uploading new files [1/2] (50%) 
+[info] i  hosting: uploading new files [1/2] (50%) 
+[info] i  hosting: uploading new files [1/2] (50%) 
+[info] i  hosting: uploading new files [1/2] (50%) 
+[info] i  hosting: uploading new files [1/2] (50%) 
+[info] i  hosting: uploading new files [1/2] (50%) 
+[info] i  hosting: uploading new files [1/2] (50%) 
+[info] i  hosting: uploading new files [1/2] (50%) 
+[info] i  hosting: uploading new files [1/2] (50%) 
+[info] i  hosting: uploading new files [1/2] (50%) 
+[info] i  hosting: uploading new files [1/2] (50%) 
+[info] i  hosting: uploading new files [1/2] (50%) 
+[info] i  hosting: uploading new files [1/2] (50%) 
+[info] i  hosting: uploading new files [1/2] (50%) 
+[info] i  hosting: uploading new files [1/2] (50%) 
+[info] i  hosting: uploading new files [1/2] (50%) 
+[info] i  hosting: uploading new files [1/2] (50%) 
+[debug] [2021-03-16T21:05:44.310Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/firegram-ecd03/versions/3aac7cda085883f5/files/40545d5e3699e2d54edefdc9e851b2d146ff251cc38610d423c38fbd2ea15566 200
+[debug] [2021-03-16T21:05:44.311Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/firegram-ecd03/versions/3aac7cda085883f5/files/40545d5e3699e2d54edefdc9e851b2d146ff251cc38610d423c38fbd2ea15566 [stream]
+[debug] [2021-03-16T21:05:44.313Z] [hosting][upload queue][FINAL] {"max":42231,"min":24431,"avg":33331,"active":0,"complete":2,"success":2,"errored":0,"retried":2,"total":2,"elapsed":117259}
+[info] +  hosting[firegram-ecd03]: file upload complete 
+[debug] [2021-03-16T21:05:44.315Z] [hosting] deploy completed after 118320ms
+[debug] [2021-03-16T21:06:06.232Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "firegram-ecd03"
+    },
+    "site": "firegram-ecd03",
+    "version": "sites/firegram-ecd03/versions/3aac7cda085883f5"
+  }
+]
+[info] i  hosting[firegram-ecd03]: finalizing version... 
+[debug] [2021-03-16T21:06:06.239Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-03-16T21:06:06.241Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-16T21:06:06.576Z] <<< HTTP RESPONSE 200 {"date":"Tue, 16 Mar 2021 21:06:06 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-16T21:06:06.642Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/firegram-ecd03/versions/3aac7cda085883f5?updateMask=status  
+ {"status":"FINALIZED"}
+[debug] [2021-03-16T21:06:07.298Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 16 Mar 2021 21:06:06 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-16T21:06:07.299Z] [hosting] finalized version for firegram-ecd03: {"name":"sites/firegram-ecd03/versions/3aac7cda085883f5","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2021-03-16T21:03:45.049386Z","createUser":{"email":"jose.mom.1304@gmail.com"},"finalizeTime":"2021-03-16T21:06:06.759468Z","finalizeUser":{"email":"jose.mom.1304@gmail.com"}}
+[info] +  hosting[firegram-ecd03]: version finalized 
+[info] i  hosting[firegram-ecd03]: releasing new version... 
+[debug] [2021-03-16T21:06:07.302Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/firegram-ecd03/releases?version_name=sites/firegram-ecd03/versions/3aac7cda085883f5  
+ {"message":null}
+[debug] [2021-03-16T21:06:07.898Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 16 Mar 2021 21:06:07 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-16T21:06:07.899Z] [hosting] release: {"name":"sites/firegram-ecd03/releases/1615928766681518","version":{"name":"sites/firegram-ecd03/versions/3aac7cda085883f5","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2021-03-16T21:03:45.049386Z","createUser":{"email":"jose.mom.1304@gmail.com"},"finalizeTime":"2021-03-16T21:06:06.759468Z","finalizeUser":{"email":"jose.mom.1304@gmail.com"},"preview":{}},"type":"DEPLOY","releaseTime":"2021-03-16T21:06:06.681518962Z","releaseUser":{"email":"jose.mom.1304@gmail.com"}}
+[info] +  hosting[firegram-ecd03]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/firegram-ecd03/overview
+[info] Hosting URL: https://firegram-ecd03.web.app

@@ -1,7 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
+
 import { projectFirestore } from "../firebase/config";
 
-export default function useProfilePics(usernames) {
+const ProfilePicsContext = createContext();
+
+export function useProfilePics() {
+    return useContext(ProfilePicsContext);
+}
+
+export function ProfilePicsProvider({ children, usernames }) {
     const [profilePics, setProfilePics] = useState();
 
     useEffect(() => {
@@ -23,5 +30,14 @@ export default function useProfilePics(usernames) {
         };
         fetch();
     }, [usernames]);
-    return { profilePics };
+
+    const value = {
+        profilePics,
+    };
+
+    return (
+        <ProfilePicsContext.Provider value={value}>
+            {children}
+        </ProfilePicsContext.Provider>
+    );
 }

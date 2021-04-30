@@ -13,12 +13,11 @@ import styles from "./PostCard.module.css";
 const PostCard = ({ post }) => {
     const { setImage } = useShowImage();
     const [postState, setPostState] = useState(post);
-
     return (
         <li className={styles.Card} data-testid="post-card-component">
             <img src={post.url} alt="post" onClick={() => setImage(post)} />
             <div className={styles.UserData}>
-                <div>
+                <div className={styles.ImgAndUsername}>
                     <Avatar src={post.userData.photoURL} mini />
                     <Link to={`/u/${post.user}`}>{post.user}</Link>
                 </div>

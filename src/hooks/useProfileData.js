@@ -2,17 +2,16 @@ import { useState, useEffect } from "react";
 import { fetchUserInfo } from "../helpers/profile";
 
 const useProfileData = (username) => {
-    const [userData, setUserData] = useState([]);
+    const [profileData, setProfileData] = useState([]);
     useEffect(() => {
-        console.log(username);
         const fetchData = async () => {
             const { userData } = await fetchUserInfo(username);
-            setUserData(userData);
+            setProfileData(userData);
         };
 
         fetchData();
     }, [username]);
-    return { userData };
+    return { profileData };
 };
 
 export default useProfileData;

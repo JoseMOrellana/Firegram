@@ -36,7 +36,7 @@ const FollowButton = ({ username, update, ...rest }) => {
 };
 
 FollowButton.propTypes = {
-    username: PropTypes.string.isRequired,
+    username: PropTypes.string,
     update: PropTypes.func,
 };
 

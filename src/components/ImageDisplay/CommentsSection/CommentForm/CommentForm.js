@@ -2,7 +2,6 @@ import React from "react";
 import { useUser } from "../../../../context/UserContext";
 import useForm from "../../../../hooks/useForm";
 import Button from "../../../Button/Button";
-import FormInput from "../../../FormInput/FormInput";
 import styles from "./CommentForm.module.css";
 
 export default function CommentForm({ selectedImg, parentComment }) {
@@ -12,11 +11,10 @@ export default function CommentForm({ selectedImg, parentComment }) {
     });
     return (
         <div className={styles.Container} data-testid="comment-form">
-            <FormInput
+            <input
                 type="text"
                 name="comment"
                 placeholder="Comment"
-                style={{ marginBottom: "0" }}
                 value={inputs.comment}
                 onChange={handleInputChange}
                 data-testid="comment-form-input"

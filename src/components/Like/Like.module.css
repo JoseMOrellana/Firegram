@@ -1,0 +1,7 @@
+.Container svg {
+    font-size: 32px;
+}
+
+.Liked {
+    color: var(--primary);
+}

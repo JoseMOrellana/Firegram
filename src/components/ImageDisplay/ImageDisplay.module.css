@@ -9,17 +9,23 @@
 }
 .ImgWrapper {
     width: 50vw;
+    max-width: 584px;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: stretch;
 }
+.Info {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    max-width: 351px;
+}
 .Header {
     display: flex;
     align-items: center;
-    padding: 0 10px;
+    padding: 18px 10px;
     border-bottom: 1px solid #ddd;
-    height: 10%;
 }
 .Img {
     width: 10%;
@@ -35,6 +41,13 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
+}
+
+.Footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 @media only screen and (max-width: 768px) {
@@ -45,11 +58,14 @@
 
     .ImgWrapper {
         width: 80vw;
+        max-width: 613px;
         height: 80vw;
     }
 
     .Info {
         background-color: #fff;
+        width: 80vw;
+        max-width: 613px;
         max-height: 60vw;
     }
 }

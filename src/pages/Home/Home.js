@@ -6,19 +6,25 @@ import NoMoreLoad from "../../components/NoMoreLoad/NoMoreLoad";
 import { useInfiniteScroll } from "../../context/InfiniteScrollContext";
 import PostCard from "./PostCard/PostCard";
 import Spinner from "../../components/Spinner/Spinner";
+import { ProfilePicsProvider } from "../../context/ProfilePicsContext";
 
 export default function Home() {
     const [posts, setPosts] = useState([]);
+    const [usernames, setUsernames] = useState();
     const { fetchPosts, loading, done } = useInfiniteScroll();
     const loader = useRef(null);
     const btn = useRef(null);
 
     const updateGrids = async () => {
         const results = await fetchPosts();
-        const newPostCards = results.map((post) => {
-            return <PostCard post={post} />;
+        const newPostCards = [];
+        const usernames = [];
+        results.forEach((post) => {
+            newPostCards.push(<PostCard post={post} key={post.id} />);
+            usernames.push(post.user);
         });
         setPosts(posts.concat(newPostCards));
+        setUsernames(usernames);
     };
     useEffect(() => {
         const options = {
@@ -35,24 +41,26 @@ export default function Home() {
         updateGrids();
     }, []);
     return (
-        <div className="content" data-testid="home-page">
-            <ul className={styles.Container}>{posts}</ul>
-            {loading && <Spinner />}
-            {!done && (
-                <button
-                    onClick={() => {
-                        updateGrids();
-                    }}
-                    ref={btn}
-                    className={styles.HideButton}
-                    data-testid="fetch-more-button"
-                >
-                    state check
-                </button>
-            )}
+        <ProfilePicsProvider usernames={[...new Set(usernames)]}>
+            <div className="content" data-testid="home-page">
+                <ul className={styles.Container}>{posts}</ul>
+                {loading && <Spinner />}
+                {!done && (
+                    <button
+                        onClick={() => {
+                            updateGrids();
+                        }}
+                        ref={btn}
+                        className={styles.HideButton}
+                        data-testid="fetch-more-button"
+                    >
+                        state check
+                    </button>
+                )}
 
-            {!done && <div className="loading" ref={loader}></div>}
-            {done && <NoMoreLoad />}
-        </div>
+                {!done && <div className="loading" ref={loader}></div>}
+                {done && <NoMoreLoad />}
+            </div>
+        </ProfilePicsProvider>
     );
 }

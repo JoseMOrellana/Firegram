@@ -3,12 +3,13 @@ import { FaHeart, FaRegHeart } from "react-icons/fa";
 import PropTypes from "prop-types";
 
 import { useUser } from "../../context/UserContext";
+import styles from "./Like.module.css";
 
 const Like = ({ post, update }) => {
     const { currentUser, like, dislike } = useUser();
 
     return (
-        <div data-testid="like-component">
+        <div data-testid="like-component" className={styles.Container}>
             {post.likedBy.includes(currentUser.username) ? (
                 <FaHeart
                     onClick={() => {
@@ -21,6 +22,7 @@ const Like = ({ post, update }) => {
                             ),
                         });
                     }}
+                    className={styles.Liked}
                     data-testid="liked-icon"
                 />
             ) : (
@@ -42,7 +44,7 @@ const Like = ({ post, update }) => {
 
 Like.propTypes = {
     post: PropTypes.object.isRequired,
-    update: PropTypes.func,
+    update: PropTypes.func.isRequired,
 };
 
 export default Like;

@@ -19,6 +19,17 @@
     align-items: center;
 }
 
+.ImgAndUsername {
+    display: flex;
+    align-items: center;
+}
+
+.ImgAndUsername a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 .Details {
     padding: 0 12px;
     display: flex;

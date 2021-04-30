@@ -140,11 +140,13 @@ const UploadForm = ({ showForm, description, submit }) => {
                     </label>
                     <div className="output">
                         {error && (
-                            <div className="error" data-testid="error-span">
+                            <div
+                                className={styles.Error}
+                                data-testid="error-span"
+                            >
                                 {error}
                             </div>
                         )}
-                        {file?.filename && <div>{file.filename}</div>}
                         {file && (
                             <ReactCrop
                                 src={file.content}

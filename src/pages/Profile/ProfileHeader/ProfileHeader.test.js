@@ -21,7 +21,7 @@ const userData = {
     photoURL: "",
     username: "user",
     name: "",
-    posts: [""],
+    posts: 2,
     followers: ["", ""],
     following: ["", "", ""],
 };

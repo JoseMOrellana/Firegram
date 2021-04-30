@@ -33,7 +33,7 @@ const Avatar = ({ src, mini, medium }) => {
 };
 
 Avatar.propTypes = {
-    src: PropTypes.string.isRequired,
+    src: PropTypes.string,
     mini: PropTypes.bool,
     medium: PropTypes.bool,
 };

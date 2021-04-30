@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
@@ -15,8 +15,9 @@ import Like from "../Like/Like";
 
 const ImageDisplay = ({ selectedImg }) => {
     const { setImage } = useShowImage();
-    const { comments } = useComments(selectedImg.id);
-    const { userData } = useProfileData(selectedImg.user);
+    const { comments, profilePics } = useComments(selectedImg.id);
+    const { profileData } = useProfileData(selectedImg.user);
+    const [postState, setPostState] = useState(selectedImg);
 
     return (
         <div className={styles.Container} data-testid="image-display-component">
@@ -27,29 +28,30 @@ const ImageDisplay = ({ selectedImg }) => {
             />
             <div className={styles.Info}>
                 <div className={styles.Header}>
-                    <Avatar src={userData.photoURL} mini />
+                    <Avatar src={profileData.photoURL} mini />
                     <Link
-                        to={"/u/" + userData.username}
+                        to={"/u/" + profileData.username}
                         className={styles.Username}
                         onClick={() => {
                             setImage(null);
                         }}
                         data-testid="user-link"
                     >
-                        {userData.username}
+                        {profileData.username}
                     </Link>
                     <FollowButton
-                        username={userData.username}
+                        username={profileData.username}
                         style={{ marginLeft: "auto" }}
                     />
                 </div>
                 <CommentsSection
                     comments={comments}
+                    profilePics={profilePics}
                     selectedImg={selectedImg}
                 />
                 <div className={styles.Footer}>
                     <div className={styles.Details}>
-                        <Like post={selectedImg} />
+                        <Like post={selectedImg} update={setPostState} />
                         <span>{timeAgo(selectedImg.createdAt.toDate())}</span>
                     </div>
                     <CommentForm selectedImg={selectedImg} />

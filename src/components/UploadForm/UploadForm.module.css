@@ -49,9 +49,17 @@
     overflow-y: auto;
 }
 
-.Adjust {
-    color: #ccc;
+.Adjust,
+.Error {
     text-align: center;
     display: block;
     margin: 8px 0;
+}
+
+.Adjust {
+    color: #ccc;
+}
+
+.Error {
+    color: #ff0000;
 }

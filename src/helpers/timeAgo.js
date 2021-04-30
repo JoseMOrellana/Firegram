@@ -3,8 +3,7 @@ export const timeAgo = (date) => {
     var minute = 60,
         hour = minute * 60,
         day = hour * 24,
-        week = day * 7,
-        month = day * 30;
+        week = day * 7;
 
     if (delta < 30) {
         return "just then.";
@@ -18,7 +17,7 @@ export const timeAgo = (date) => {
     if (delta < hour) {
         return Math.floor(delta / minute) + " minutes ago.";
     }
-    if (Math.floor(delta / hour) == 1) {
+    if (Math.floor(delta / hour) === 1) {
         return "1 hour ago.";
     }
     if (delta < day) {
@@ -30,7 +29,7 @@ export const timeAgo = (date) => {
     if (delta < week) {
         return Math.floor(delta / day) + " days ago.";
     }
-    if (delta < month) {
+    if (delta > week) {
         return Math.floor(delta / week) + " weeks ago.";
     }
 };

@@ -7,29 +7,37 @@ import { useParams } from "react-router-dom";
 import useProfileData from "../../hooks/useProfileData";
 import usePics from "../../hooks/usePics";
 import { useUser } from "../../context/UserContext";
+import NoUserFound from "./NoUserFound/NoUserFound";
 
 export default function Profile() {
     const { currentUser, uploadImage } = useUser();
     const { username } = useParams();
-    let { userData } = useProfileData(username);
+    const { profileData } = useProfileData(username);
     const { pics } = usePics(username);
-    userData = { ...userData, posts: pics.length };
+    const userData = { ...profileData, posts: pics.length };
     const [showUploadForm, setShowUploadForm] = useState(false);
 
+    console.log();
     return (
         <div className="content" data-testid="profile-page">
-            <ProfileHeader userData={userData} />
-            {username === currentUser.username ? (
-                <UploadButton showForm={setShowUploadForm} />
-            ) : null}
-            {showUploadForm && (
-                <UploadForm
-                    showForm={setShowUploadForm}
-                    description
-                    submit={uploadImage}
-                />
+            {profileData ? (
+                <>
+                    <ProfileHeader userData={userData} />
+                    {username === currentUser.username ? (
+                        <UploadButton showForm={setShowUploadForm} />
+                    ) : null}
+                    {showUploadForm && (
+                        <UploadForm
+                            showForm={setShowUploadForm}
+                            description
+                            submit={uploadImage}
+                        />
+                    )}
+                    <ImageGrid pics={pics} user={userData} />
+                </>
+            ) : (
+                <NoUserFound />
             )}
-            <ImageGrid pics={pics} user={userData} />
         </div>
     );
 }

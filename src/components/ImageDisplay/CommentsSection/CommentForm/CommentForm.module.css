@@ -1,4 +1,13 @@
 .Container {
+    box-sizing: border-box;
     width: 100%;
     display: flex;
+    margin-top: 8px;
+    height: 40px;
+}
+
+.Container input {
+    flex-grow: 1;
+    border-color: #ccc;
+    border-width: 1px 1px 0 0;
 }

@@ -8,6 +8,7 @@ import Avatar from "../../../components/Avatar/Avatar";
 import FollowButton from "../../../components/FollowButton/FollowButton";
 
 const ProfileHeader = ({ userData }) => {
+    console.log(userData);
     const { currentUser } = useUser();
 
     const editProfile = (
@@ -43,7 +44,7 @@ const ProfileHeader = ({ userData }) => {
                     <div className={styles.Second}>
                         <span>
                             <strong data-testid="user-posts-number">
-                                {userData?.posts.length}
+                                {userData?.posts}
                             </strong>{" "}
                             posts
                         </span>

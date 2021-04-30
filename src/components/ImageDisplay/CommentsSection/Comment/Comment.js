@@ -6,8 +6,10 @@ import styles from "./Comment.module.css";
 import { useShowImage } from "../../../../context/ShowImageContext";
 import Avatar from "../../../Avatar/Avatar";
 import CommentForm from "../CommentForm/CommentForm";
+import { useProfilePics } from "../../../../context/ProfilePicsContext";
 
 const Comment = ({ data, selectedImg }) => {
+    const { profilePics } = useProfilePics();
     const { setImage } = useShowImage();
     const [showResponses, setShowResponses] = useState(false);
     const [showForm, setShowForm] = useState(false);
@@ -16,12 +18,10 @@ const Comment = ({ data, selectedImg }) => {
         <Comment data={response} />
     ));
 
-    console.log(responses);
-
     return (
         <li key={data.id || data.createdAt} data-testid="comment-component">
             <div className={styles.Container}>
-                <Avatar src={data.user.photoURL} mini />
+                <Avatar src={profilePics[data.user]} mini />
                 <div className={styles.Content}>
                     <Link
                         to={`/u/${data.user}`}
@@ -68,8 +68,8 @@ const Comment = ({ data, selectedImg }) => {
 };
 
 Comment.propTypes = {
-    data: PropTypes.object.isRequired,
-    selectedImg: PropTypes.object.isRequired,
+    data: PropTypes.object,
+    selectedImg: PropTypes.object,
 };
 
 export default Comment;

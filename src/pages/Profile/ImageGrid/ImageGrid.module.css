@@ -12,6 +12,7 @@
     /* padding controls height, will always be perfectly square regardless of width */
     position: relative;
     opacity: 0.8;
+    cursor: pointer;
 }
 .ImgWrap img {
     min-width: 100%;

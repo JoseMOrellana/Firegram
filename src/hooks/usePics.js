@@ -7,7 +7,7 @@ const usePics = (userID) => {
         const unsub = projectFirestore
             .collection("posts")
             .where("user", "==", userID)
-            .orderBy("createdAt")
+            .orderBy("createdAt", "desc")
             .onSnapshot((snap) => {
                 console.log(userID);
                 let pics = [];
